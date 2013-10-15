@@ -1,0 +1,17 @@
+.carousel .flexslider {
+  margin-bottom: 0;
+  padding: 20px 0 0;
+  .slides > li {
+    position: relative;
+    margin-right: 60px;
+    h3 {
+      font-size: 1.1em;
+      font-weight: 600;
+    }
+    img {
+      border: 1px solid $border-color;
+      @include border-radius(5px);
+      width: auto;
+    }
+  }
+}

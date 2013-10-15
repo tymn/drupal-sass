@@ -1,0 +1,34 @@
+/* Shows a single date entry in flip calendar style */
+
+.flip-calendar {
+  font-size: 0.6em;
+  width: 50px;
+  background-color: #F7F7F7; 
+  border: 1px solid #DCDCDC;
+  text-align: center;
+  @include breakpoint($tab, true) {
+    width: auto;
+    height: 78px;
+    font-size: 0.8em;
+  }
+}
+
+.flip-calendar__day {
+  font-size: 3.6em;
+  color: #9e9e9e;
+}
+
+.flip-calendar__month {
+  background-color: #88AEC7; 
+  font-size: 1.6em; 
+  font-weight: bold; 
+  color: #fff; 
+  text-transform: uppercase;   
+  display: block;
+}
+
+.flip-calendar__year {
+  font-size: 1.4em;  
+  display: block;
+  padding: 3px 0;
+}

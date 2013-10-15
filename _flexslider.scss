@@ -1,0 +1,84 @@
+.flexslider {
+  border: none;
+  @include border-radius(none);
+  @include box-shadow(none);
+}
+
+.flexslider {
+	ul li {
+	  margin-left: 0;
+	}
+	h2 {
+	  background: #FFF;
+	  padding: 20px;
+	  font-size: 1.6em;
+	  @include breakpoint($tab, true) { 
+		position: absolute;
+		top: -10px;
+	  left: 10px;
+	  }
+	}
+}
+
+.slider-caption {
+  background-color: $bg-color-light;
+  padding: 5px 10px;
+  @include breakpoint($tab, true) { 
+  	position: absolute;
+    padding: 0 20px;
+  	bottom: 10px;
+    background-color: $matt-black;
+  	background-color: rgba(0,0,0,0.8);
+  	font-weight: 300;
+  	width: 100%;
+  	p {
+		color: #FFF;
+  		}
+  	}
+}
+
+.flex-control-paging {
+  li a {
+    background: $bg-color;
+    &:hover {
+      background: $link-color;
+    }
+    &.flex-active {
+      background: $link-color;
+    }
+  }
+}
+
+.flex-direction-nav li a {
+    width: 50px; 
+    height: 50px; 
+    margin: -20px 0 0;
+    display: block;
+    background: url(../images/flex-direction-nav.png) no-repeat 0 0; 
+    position: absolute;
+    top: 50%;
+    display: none;
+  &.flex-next {
+    right: 10px;
+    background-position: -50px 0;
+  }
+  &.flex-prev {
+    left: 10px;
+  }
+  @include breakpoint($tab, true) {
+    &.flex-next {
+      right: -45px;
+      background-position: -50px 0;
+    }
+    &.flex-prev {
+      left: -45px;
+    }
+  }
+}
+
+.flexslider:hover .flex-direction-nav li a {
+  display: none;
+  @include breakpoint($tab, true) {
+    display: block;
+  }
+}

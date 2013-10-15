@@ -1,0 +1,41 @@
+.icon-list ul {		
+	padding: 0 0 0 10px;
+	li { 
+	list-style-type: none;
+	margin-left: 0;
+	}
+}
+
+.icon-list--bullets ul li {
+	background-image: url(../images/icon-bullet.png);
+}
+
+.icon-list--ticks ul li {
+	@include icon-font;
+	&:before {
+		content: '\e81b';
+		color: $purple;
+	}
+}
+
+.vertical-list ul li, .h-list ul li {
+	display: inline-block;
+}
+
+.grid-list {
+	ul {
+		@include inline-block-list;
+	}
+	li {
+		width: 100%;
+	}
+	@include breakpoint($tab, true) {
+		ul {
+			@include clearfix;
+		}
+		li {
+			@include span-columns(4,12);
+			@include nth-omega(3n);
+		}
+	}
+}
